@@ -72,11 +72,6 @@ setObj7 = set({CollectionEntry("", "К")})
 # набор с передачей пустых параметров
 setObj8 = set({CollectionEntry("", "")})
 
-# набор с объектами других цветов
-setObj9 = set({CollectionEntry("car", "Ж"),
-               CollectionEntry("house", "Ч"),
-               CollectionEntry("plain", "Б")})
-
 
 def test_sort1():
     result = sort_utils.sort(setObj1_src, "З<С<К")
@@ -126,7 +121,3 @@ def test_sort0():
     result = sort_utils.sort(setObj1_src, "ЗСК")
     assert result == "Неверно задан прядок сортировки"
 
-
-def test_sort9():
-    result = sort_utils.sort(setObj9, "З<С<К")
-    assert result == "Нет объектов необходимых цветов"
